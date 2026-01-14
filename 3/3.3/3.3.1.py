@@ -42,11 +42,7 @@ def get_list_url(url: str) -> list[str]:
     list_url = [i.split('"')[1] for i in list_url]
     list_url = [i.replace('stepic.org', 'stepik.org') for i in list_url]
 
-    
     return list_url
-
-
-get_list_url('https://stepik.org/media/attachments/lesson/24472/sample0.html')
 
 
 def main():
@@ -62,7 +58,7 @@ def main():
 
     list_links = []
 
-    for i in list_url:        
+    for i in list_url:
         list_links.extend(get_list_url(i))
            
     return 'Yes' if url_B in list_links else 'No'
